@@ -24,6 +24,12 @@ resource "google_cloud_run_service" "default" {
   }
 }
 
+##output:
+
+output "cloud_run_url" {
+  value = google_cloud_run_service.default.status[0].url
+}
+
 resource "google_cloud_run_service_iam_member" "public_access" {
   service  = google_cloud_run_service.default.name
   location = google_cloud_run_service.default.location
