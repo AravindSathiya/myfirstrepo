@@ -55,7 +55,7 @@ resource "google_compute_instance" "simple_vm" {
 
   metadata_startup_script = <<-EOT
     #!/bin/bash
-    echo "Hello from startup script" > /var/log/startup-script.log
+    echo "Hello from startup script!" > /var/log/startup-script.log
     date >> /var/log/startup-script.log
   EOT
 
