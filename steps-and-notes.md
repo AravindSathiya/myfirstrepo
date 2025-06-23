@@ -13,9 +13,9 @@
 - Navigate to **Artifact Registry** in the left sidebar.
 - Click on **Create Repository**.
 - Fill in the repository details:
-  - **Name**: Choose a name for your repository.
+  - **Name**: Choose a name for your repository. my-repo
   - **Format**: Select `Docker`.
-  - **Location**: Choose a region or multi-region.
+  - **Location**: Choose a region or multi-region. us-central1
   - **Description**: Optionally, add a description.
   - 
 
@@ -60,9 +60,9 @@ jobs:
 
     env:
       REGION: us-central1
-      REPOSITORY: my-docker-repo
-      SERVICE_NAME: my-app
-      IMAGE_NAME: spring-boot
+      REPOSITORY: my-repo
+      SERVICE_NAME: flask-app
+      IMAGE_NAME: flask-app
 
     steps:
       - name: Checkout code
